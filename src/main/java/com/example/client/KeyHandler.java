@@ -1,10 +1,17 @@
-package com.example;
+package com.example.client;
 import java.awt.event.KeyListener;
+import java.io.Serializable;
+
+import com.example.PlayerInput;
+
 import java.awt.event.KeyEvent;
 public class KeyHandler implements KeyListener{
     public boolean jumpPressed, leftPressed, rightPressed, jabPressed, shieldPressed, crouchPressed;
     public KeyHandler(){
 
+    }
+    public PlayerInput toPlayerInput(boolean playerControlled){
+        return new PlayerInput(playerControlled, jumpPressed, leftPressed, rightPressed, jabPressed, shieldPressed, crouchPressed);
     }
     public void keyTyped(KeyEvent e){
         

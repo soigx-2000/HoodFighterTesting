@@ -1,4 +1,4 @@
-package com.example;
+package com.example.client;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
 
-import com.example.Player.Status;
+import com.example.server.Player.Status;
 public class PlayerSprite{
     private boolean forward = true;//used for travesal
     int ID;//testing purpose only, to be deleted
@@ -43,7 +43,6 @@ public class PlayerSprite{
             }
         }
         else if (id == 2){
-            System.out.println("player 2 sprite here");
             ID = id;
         }
     }
@@ -54,6 +53,7 @@ public class PlayerSprite{
             currentImageIndex++;
         else
             currentImageIndex = 0;
+        
     }
 
     //precondition: player's status changed

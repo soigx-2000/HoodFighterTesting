@@ -1,6 +1,8 @@
-package com.example;
+package com.example.server;
 
-public class Hitbox {
+import java.io.Serializable;
+
+public class Hitbox implements Serializable{
 	public int x = 0;
 	public int y = 0;
 	public int width = 0;
